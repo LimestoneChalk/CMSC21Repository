@@ -3,10 +3,9 @@
 int main(void)
 {
     int userArr[99], num, i, j, temp, searchInt, choice, terminateLoop = 1;
-    int primeArr[15] = {2, 3, 6, 7, 11, 13, 17, 19, 23, 28, 31, 37, 41, 43, 47};
 
     printf("Welcome to Selection Sorting and Linear Searching \n      By Jaspa and Gotas    \n");
-    printf("Would you like to Proceed in using the Program? \n Input the number: \n 1 - Yes \n 2 - No ");
+    printf("Would you like to Proceed in using the Program? \nInput the number: \n1 - Yes \n2 - No ");
     scanf("%d", &choice);
     printf("\n");
 
@@ -42,25 +41,24 @@ int main(void)
         // Linear Search By Gotas //
 
 
-            printf("Find a Prime Number between 1 to 50! \n");
-            printf("Enter a suspected prime number: \n");
+            printf("Search a number from the given array!\n");
+            printf("Enter a number: \n");
             scanf("\n %d", &searchInt);
-
             if (searchInt <= 0) // checks if number is invalid
             {
                 printf("I'm sorry, that's an invalid number!");
             }
             else
             {
-                for (int i = 0; i < 15; i++){ 
-                    if(primeArr[i] == searchInt)
+                for (int i = 0; i < num; i++){ 
+                    if(userArr[i] == searchInt)
                     {
-                        printf("\nFound the prime! It's at the %d position on the list!", i); //if match, print index 
+                        printf("\nFound the number! It's at position %d on the list!", i); //if match, print index 
                         break;
                     }
-                    else if (i == 14)
+                    else if (i == (num - 1))
                     {
-                        printf("\nThis number is not a prime from 1 to 50.");
+                        printf("\nThis number does not exist in the given array.");
                     }
                 }
             }
